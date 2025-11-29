@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
+<<<<<<< HEAD
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Solomon — Web Developer</title>
@@ -8,6 +9,22 @@
   <link rel="icon" href="/favicon.ico" />
   <meta name="theme-color" content="#00ff88">
 
+=======
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Solomon — Web Developer</title>
+  <meta name="description" content="Solomon — front-end developer. Portfolio of projects and contact.">
+  <link rel="icon" href="/favicon.ico" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Solomon — Web Developer">
+  <meta property="og:description" content="Portfolio of front-end projects and contact.">
+  <meta property="og:image" content="social-preview.png">
+
+  <!-- Theme color -->
+  <meta name="theme-color" content="#0ea5a4">
+
+>>>>>>> 764dd2f13f214328fb4e7cb0ff23fc945d6d196b
   <!-- CSS -->
   <link rel="stylesheet" href="style.css">
 </head>
@@ -24,6 +41,10 @@
 
       <div class="header-controls">
         <button id="themeToggle" aria-label="Toggle dark theme">🌙</button>
+<<<<<<< HEAD
+=======
+        <button id="menuBtn" aria-expanded="false" aria-controls="mainNav" class="menu-btn">☰</button>
+>>>>>>> 764dd2f13f214328fb4e7cb0ff23fc945d6d196b
       </div>
     </div>
 
@@ -40,6 +61,7 @@
   <main id="main" class="wrap" role="main">
     <!-- HERO / HOME -->
     <section id="home" class="hero" aria-labelledby="home-title">
+<<<<<<< HEAD
       <div class="hero-left">
         <p class="subtle">HELLO I'M</p>
         <h2 id="home-title" class="hero-name">SOLOMON</h2>
@@ -167,6 +189,105 @@
     </section>
   </main>
 
+=======
+      <div class="hero-content">
+        <h2 id="home-title" class="big">Hi — I'm Solomon.</h2>
+        <p class="lead">I build fast, accessible, and beautiful front-end experiences.</p>
+        <p><a class="cta" href="#projects">View projects</a> <a class="btn-outline" href="#contact">Get in touch</a></p>
+      </div>
+      <div class="hero-media" aria-hidden="true">
+        <img src="profile.jpg" alt="" class="hero-avatar">
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="card" aria-labelledby="about-title">
+      <h3 id="about-title">About</h3>
+      <p>I’m a front-end developer focused on accessible, performant websites. I work with HTML, CSS, JavaScript, and modern tooling to ship clean UI.</p>
+      <ul class="skills">
+        <li>HTML &semantics;</li>
+        <li>Responsive CSS</li>
+        <li>Vanilla JS & small frameworks</li>
+        <li>Performance & accessibility</li>
+      </ul>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="card" aria-labelledby="projects-title">
+      <h3 id="projects-title">Selected Projects</h3>
+
+      <div class="projects-grid">
+        <!-- Project 1 -->
+        <article class="project-card" tabindex="0">
+          <img src="project1.png" alt="Project 1 screenshot" class="project-thumb">
+          <div class="project-body">
+            <h4>Project One</h4>
+            <p>Short description — what it does and why it matters.</p>
+            <p class="project-actions">
+              <a href="#" class="btn">Live</a>
+              <a href="#" class="btn-outline">Code</a>
+            </p>
+          </div>
+        </article>
+
+        <!-- Project 2 -->
+        <article class="project-card" tabindex="0">
+          <img src="project2.png" alt="Project 2 screenshot" class="project-thumb">
+          <div class="project-body">
+            <h4>Project Two</h4>
+            <p>Short description — modern design, responsive, accessible.</p>
+            <p class="project-actions">
+              <a href="#" class="btn">Live</a>
+              <a href="#" class="btn-outline">Code</a>
+            </p>
+          </div>
+        </article>
+
+        <!-- Add more projects as needed -->
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="card" aria-labelledby="contact-title">
+      <h3 id="contact-title">Contact</h3>
+
+      <div class="space-y-4 text-lg text-gray-700">
+<p><strong>Phone:</strong> +251914131094</p>
+<p><strong>Email:</strong> abajember12@gmail.com</p>
+<p><strong>LinkedIn:</strong> <a href="#" class="text-teal-600">linkedin.com/in/Solomon Fentaw</a></p>
+<p><strong>GitHub:</strong> <a href="#" class="text-teal-600">https://github.com/Henry24-94/</a></p>
+</div>
+
+      <form id="contactForm" class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" novalidate>
+        <label class="form-row">
+          <span class="label">Name</span>
+          <input name="name" type="text" required>
+        </label>
+
+        <label class="form-row">
+          <span class="label">Email</span>
+          <input name="email" type="email" required>
+        </label>
+
+        <label class="form-row" style="display:none">
+          <span class="label">Leave empty</span>
+          <input name="phone" type="text" autocomplete="off" tabindex="-1">
+        </label>
+
+        <label class="form-row">
+          <span class="label">Message</span>
+          <textarea name="message" rows="5" required></textarea>
+        </label>
+
+        <div class="form-actions">
+          <button type="submit" class="btn">Send message</button>
+          <span id="formStatus" role="status" aria-live="polite"></span>
+        </div>
+      </form>
+    </section>
+  </main>
+
+>>>>>>> 764dd2f13f214328fb4e7cb0ff23fc945d6d196b
   <footer class="site-footer">
     <div class="wrap">
       <p>© <span id="year"></span> Solomon — Built with care</p>

@@ -15,6 +15,7 @@ document.querySelectorAll('a[href^="#"]').forEach(a=>{
 const roles = ['Front-end Developer', 'UI Enthusiast', 'Performance Fanatic'];
 const typedEl = document.getElementById('typed-role');
 let r = 0, i = 0, deleting = false;
+
 function typeLoop(){
   if(!typedEl) return;
   const full = roles[r];
@@ -66,6 +67,7 @@ const reveal = new IntersectionObserver((entries)=>{
   entries.forEach(entry=>{
     if(entry.isIntersecting){
       entry.target.classList.add('visible');
+
       // stagger project cards when projects section reveals
       if(entry.target.id === 'projects'){
         const cards = entry.target.querySelectorAll('.project-card');
@@ -100,4 +102,6 @@ if(form){
 }
 
 // keyboard focus outline helper
-document.addEventListener('keydown', (e)=>{ if(e.key==='Tab') document.documentElement.classList.add('show-focus'); });
+document.addEventListener('keydown', (e)=>{ 
+  if(e.key==='Tab') document.documentElement.classList.add('show-focus'); 
+});
