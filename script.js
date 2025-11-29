@@ -1,4 +1,3 @@
-
 // Smooth in-page scroll
 document.querySelectorAll('a[href^="#"]').forEach(a=>{
   a.addEventListener('click', e=>{
@@ -11,6 +10,27 @@ document.querySelectorAll('a[href^="#"]').forEach(a=>{
     }
   });
 });
+
+// Typing effect for role (array of roles)
+const roles = ['Front-end Developer', 'UI Enthusiast', 'Performance Fanatic'];
+const typedEl = document.getElementById('typed-role');
+let r = 0, i = 0, deleting = false;
+function typeLoop(){
+  if(!typedEl) return;
+  const full = roles[r];
+  if(!deleting){
+    typedEl.textContent = full.slice(0, i+1);
+    i++;
+    if(i === full.length) { deleting = true; setTimeout(typeLoop, 1500); return; }
+    setTimeout(typeLoop, 80);
+  } else {
+    typedEl.textContent = full.slice(0, i-1);
+    i--;
+    if(i === 0) { deleting = false; r = (r+1) % roles.length; setTimeout(typeLoop, 400); return; }
+    setTimeout(typeLoop, 40);
+  }
+}
+typeLoop();
 
 // Theme toggle (persist)
 const themeToggle = document.getElementById('themeToggle');
@@ -41,12 +61,12 @@ function updateActive(){
 window.addEventListener('scroll', updateActive, {passive:true});
 updateActive();
 
-// Reveal observer + stagger for project cards
+// Reveal observer + stagger for project cards and section visibility
 const reveal = new IntersectionObserver((entries)=>{
   entries.forEach(entry=>{
     if(entry.isIntersecting){
       entry.target.classList.add('visible');
-      // stagger child cards if it's the projects section
+      // stagger project cards when projects section reveals
       if(entry.target.id === 'projects'){
         const cards = entry.target.querySelectorAll('.project-card');
         cards.forEach((c,i)=> setTimeout(()=> c.classList.add('visible'), i*120));
@@ -79,5 +99,5 @@ if(form){
   });
 }
 
-// small accessibility: focus outline for programmatic focus
+// keyboard focus outline helper
 document.addEventListener('keydown', (e)=>{ if(e.key==='Tab') document.documentElement.classList.add('show-focus'); });
