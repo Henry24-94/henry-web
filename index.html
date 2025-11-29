@@ -1,123 +1,159 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Solomon | Portfolio</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Solomon — Web Developer</title>
+  <meta name="description" content="Solomon — front-end developer. Portfolio of projects and contact.">
+  <link rel="icon" href="/favicon.ico" />
 
-    <!-- Basic SEO -->
-    <meta name="description" content="Solomon — portfolio of web projects and skills.">
-    <link rel="canonical" href="https://your-domain.example/">
+  <!-- Open Graph -->
+  <meta property="og:title" content="Solomon — Web Developer">
+  <meta property="og:description" content="Portfolio of front-end projects and contact.">
+  <meta property="og:image" content="social-preview.png">
 
-    <!-- Social preview -->
-    <meta property="og:title" content="Solomon | Portfolio">
-    <meta property="og:description" content="Front-end projects, experiments, and contact.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://your-domain.example/">
-    <meta property="og:image" content="social-preview.png">
+  <!-- Theme color -->
+  <meta name="theme-color" content="#0ea5a4">
 
-    <!-- Twitter card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Solomon | Portfolio">
-    <meta name="twitter:description" content="Front-end projects, experiments, and contact.">
-    <meta name="twitter:image" content="social-preview.png">
-
-    <!-- Favicon -->
-    <link rel="icon" href="/favicon.ico" sizes="any">
-    <link rel="apple-touch-icon" href="/touch-icon.png">
-
-    <!-- Theme color -->
-    <meta name="theme-color" content="#0ea5a4">
-
-    <!-- Structured data -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Solomon",
-      "url": "https://henrysolomon.vercel.app.example/",
-      "jobTitle": "Web Developer",
-      "email": "mailto:abajember12@gmail.com"
-    }
-    </script>
-
-    <link rel="stylesheet" href="style.css">
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+  <header class="site-header" role="banner">
+    <div class="wrap header-inner">
+      <div class="brand" aria-hidden="false">
+        <img src="profile.jpg" alt="Solomon" class="brand-avatar">
+        <div>
+          <h1 class="brand-title">Solomon</h1>
+          <p class="brand-sub">Front-end Developer</p>
+        </div>
+      </div>
 
-    <!-- Dark Mode Button -->
-    <button id="themeToggle">Toggle Dark</button>
+      <div class="header-controls">
+        <button id="themeToggle" aria-label="Toggle dark theme">🌙</button>
+        <button id="menuBtn" aria-expanded="false" aria-controls="mainNav" class="menu-btn">☰</button>
+      </div>
+    </div>
 
-    <!-- Skip Link -->
-    <a href="#main" class="skip-link">Skip to content</a>
-
-    <h1>Solomon</h1>
-    <p>Welcome to my portfolio!</p>
-
-    <!-- Navigation -->
-    <nav aria-label="Main navigation">
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
+    <nav id="mainNav" class="main-nav" aria-label="Main navigation">
+      <ul class="nav-list wrap">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
     </nav>
+  </header>
 
-    <!-- MAIN CONTENT -->
-    <main id="main">
+  <main id="main" class="wrap" role="main">
+    <!-- HERO / HOME -->
+    <section id="home" class="hero" aria-labelledby="home-title">
+      <div class="hero-content">
+        <h2 id="home-title" class="big">Hi — I'm Solomon.</h2>
+        <p class="lead">I build fast, accessible, and beautiful front-end experiences.</p>
+        <p><a class="cta" href="#projects">View projects</a> <a class="btn-outline" href="#contact">Get in touch</a></p>
+      </div>
+      <div class="hero-media" aria-hidden="true">
+        <img src="profile.jpg" alt="" class="hero-avatar">
+      </div>
+    </section>
 
-        <!-- HOME -->
-        <section id="home">
-            <h2>Welcome</h2>
-            <p>This is my portfolio website.</p>
+    <!-- ABOUT -->
+    <section id="about" class="card" aria-labelledby="about-title">
+      <h3 id="about-title">About</h3>
+      <p>I’m a front-end developer focused on accessible, performant websites. I work with HTML, CSS, JavaScript, and modern tooling to ship clean UI.</p>
+      <ul class="skills">
+        <li>HTML &semantics;</li>
+        <li>Responsive CSS</li>
+        <li>Vanilla JS & small frameworks</li>
+        <li>Performance & accessibility</li>
+      </ul>
+    </section>
 
-            <button id="helloBtn">Say Hello</button>
-            <p id="message"></p>
-        </section>
+    <!-- PROJECTS -->
+    <section id="projects" class="card" aria-labelledby="projects-title">
+      <h3 id="projects-title">Selected Projects</h3>
 
-        <!-- ABOUT -->
-        <section id="about">
-            <h2>About Me</h2>
-            <img src="lalibela.jpg" alt="Solomon's photo" class="profile">
-            <p>Hello, my name is Solomon, and I am a website developer.</p>
-        </section>
+      <div class="projects-grid">
+        <!-- Project 1 -->
+        <article class="project-card" tabindex="0">
+          <img src="project1.png" alt="Project 1 screenshot" class="project-thumb">
+          <div class="project-body">
+            <h4>Project One</h4>
+            <p>Short description — what it does and why it matters.</p>
+            <p class="project-actions">
+              <a href="#" class="btn">Live</a>
+              <a href="#" class="btn-outline">Code</a>
+            </p>
+          </div>
+        </article>
 
-        <!-- PROJECTS -->
-        <section id="projects">
-            <h2>Projects</h2>
+        <!-- Project 2 -->
+        <article class="project-card" tabindex="0">
+          <img src="project2.png" alt="Project 2 screenshot" class="project-thumb">
+          <div class="project-body">
+            <h4>Project Two</h4>
+            <p>Short description — modern design, responsive, accessible.</p>
+            <p class="project-actions">
+              <a href="#" class="btn">Live</a>
+              <a href="#" class="btn-outline">Code</a>
+            </p>
+          </div>
+        </article>
 
-            <div class="projects-grid">
+        <!-- Add more projects as needed -->
+      </div>
+    </section>
 
-                <article class="card">
-                    <h3>Project One</h3>
-                    <p>This is my first project!</p>
-                    <a href="#">View</a>
-                </article>
+    <!-- CONTACT -->
+    <section id="contact" class="card" aria-labelledby="contact-title">
+      <h3 id="contact-title">Contact</h3>
 
-                <article class="card">
-                    <h3>Project Two</h3>
-                    <p>This is my second project, and it's better!</p>
-                    <a href="#">View</a>
-                </article>
+      <div class="space-y-4 text-lg text-gray-700">
+<p><strong>Phone:</strong> +251914131094</p>
+<p><strong>Email:</strong> abajember12@gmail.com</p>
+<p><strong>LinkedIn:</strong> <a href="#" class="text-teal-600">linkedin.com/in/Solomon Fentaw</a></p>
+<p><strong>GitHub:</strong> <a href="#" class="text-teal-600">https://github.com/Henry24-94/</a></p>
+</div>
 
-            </div>
-        </section>
+      <form id="contactForm" class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" novalidate>
+        <label class="form-row">
+          <span class="label">Name</span>
+          <input name="name" type="text" required>
+        </label>
 
-        <!-- CONTACT -->
-        <section id="contact">
-            <h2>Contact</h2>
-            <p>You can reach me at: <strong>abajember12@gmail.com</strong></p>
-        </section>
+        <label class="form-row">
+          <span class="label">Email</span>
+          <input name="email" type="email" required>
+        </label>
 
-    </main>
+        <label class="form-row" style="display:none">
+          <span class="label">Leave empty</span>
+          <input name="phone" type="text" autocomplete="off" tabindex="-1">
+        </label>
 
-    <!-- Back To Top Button -->
-    <button id="backToTop">↑</button>
+        <label class="form-row">
+          <span class="label">Message</span>
+          <textarea name="message" rows="5" required></textarea>
+        </label>
 
-    <!-- JavaScript -->
-    <script src="script.js"></script>
+        <div class="form-actions">
+          <button type="submit" class="btn">Send message</button>
+          <span id="formStatus" role="status" aria-live="polite"></span>
+        </div>
+      </form>
+    </section>
+  </main>
 
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>© <span id="year"></span> Solomon — Built with care</p>
+    </div>
+  </footer>
+
+  <!-- Back to top -->
+  <button id="backToTop" aria-label="Back to top">↑</button>
+
+  <script src="script.js" defer></script>
 </body>
 </html>
